@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.container {
+  width: 220px;
+  height: 210px;
+  position: relative;
+}
+
+.form {  
+  width: 200px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s linear;
+  padding: 0 10px;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .3);
+}
+
+.title {
+  font-size: 15px;
+  margin-top: 10px;
+  padding-right: 80px;
+  display: inline-block;
+}
+
+.close {
+  font-size: 10px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.textarea {
+  width: 97%;
+  height: 100px;
+  border: 1px solid rgb(233, 232, 232);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.submit {
+  width: 100%;
+  height: 30px;
+  background-color: rgb(233, 232, 232);
+  border: 1px solid rgb(233, 232, 232);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.button {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: red;
+  bottom: -10px;
+  right: -10px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+}
+
+.button::after {
+  content: '';
+  background-image: url('../pic/free-icon-chat-balloon-446090.png');
+  background-size: cover;
+  bottom: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  z-index: 999;
+}
+
+.button:hover {
+  outline: 2px solid red;
+}
+
+.form-show {
+  max-height: 1000px;
+  transition: max-height 0.5s linear;
+}
+
+.appear {
+  opacity: 0;
+}
